@@ -1,0 +1,76 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container
+{
+    width: 80%;
+}
+
+.px-20
+{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.height-50
+{
+    height: 50px;
+}
+
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 5%;
+}
+
+.mt-70
+{
+    margin-top: 70px;
+}
+
+.bg-white
+{
+    background-color: white;
+}
+
+.width-100
+{
+    width: 100%;
+}
+
+.card-element
+{
+  border-radius: 8px;
+}
+
+.card-bg
+{
+  background-color: rgb(29, 29, 51);
+}
+
+.card-element p, .card-element h2
+{
+    color: white;
+}
+
+.card-element img
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.img-size
+{
+    max-width: 50%;
+    max-height: 300px;
+}
+
+.card-title
+{
+    margin-top: 20px;
+}
