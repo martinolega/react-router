@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Product from '../components/Product';
-
+import {Link} from "react-router-dom";
 
 function Products() {
     const apiLink = "https://fakestoreapi.com/products";
@@ -30,22 +29,20 @@ function Products() {
                 <h1>Products</h1>
                 {
                     loading === true ?
-                        (
-                            <div className="text-center">Loading...</div>
-                        ) :
-                        (
-                            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                        <p>Loading...</p> :
+                        <div>
+                            <ul>
                                 {
-                                    productList.map((product, index) => {
+                                    productList.map((product) => {
                                         return (
-                                            <div className="col d-flex" key={index}>
-                                                <Product product={product} />
-                                            </div>
+                                            <li key={product.id}>
+                                                <Link to={`/products/${product.id}`}>{product.title}</Link>
+                                            </li>
                                         )
                                     })
                                 }
-                            </div>
-                        )
+                            </ul>
+                        </div>
                 }
             </div>
         </>

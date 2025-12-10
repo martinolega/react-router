@@ -4,6 +4,7 @@ import './App.css'
 import Homepage from "./pages/Homepage"
 import About from "./pages/About"
 import Products from "./pages/Products"
+import SingleProduct from "./pages/SingleProduct"
 import DefaultLayout from './layout/DefaultLayout'
 
 function App() {
@@ -14,7 +15,10 @@ function App() {
           <Route element={<DefaultLayout />}>
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<About />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/products">
+              <Route path="" element={<Products />} />
+              <Route path=":id" element={<SingleProduct />} />
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>
